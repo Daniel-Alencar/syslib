@@ -8,12 +8,12 @@ package com.mycompany.syslib;
  *
  * @author engenheiro
  */
-public class Form1 extends javax.swing.JPanel {
+public class LoginScreen extends javax.swing.JPanel {
 
     /**
      * Creates new form Form1
      */
-    public Form1() {
+    public LoginScreen() {
         initComponents();
     }
 

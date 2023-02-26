@@ -32,8 +32,10 @@ public class Syslib {
         LoginScreen loginScreen = new LoginScreen();
         f.add(loginScreen);
         
-        f.revalidate();
         f.repaint();
+        
+        f.revalidate();
+        
         
     }
 }

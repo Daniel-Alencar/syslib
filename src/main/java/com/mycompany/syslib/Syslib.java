@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.syslib;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -25,10 +26,14 @@ public class Syslib {
         JPanel panel = new JPanel(new GridLayout(1, 2));
         JButton b1 = new JButton("Button 1");
         JButton b2 = new JButton("Button 2");
-        
         panel.add(b1);
         panel.add(b2);
         
-        f.add(panel);
+        LoginScreen loginScreen = new LoginScreen();
+        f.add(loginScreen);
+        
+        f.revalidate();
+        f.repaint();
+        
     }
 }

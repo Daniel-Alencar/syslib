@@ -1,2 +1,6 @@
-com/mycompany/syslib/Form1.class
 com/mycompany/syslib/Syslib.class
+com/mycompany/syslib/LoginScreen.class
+com/mycompany/syslib/CatalogoScreen.class
+com/mycompany/syslib/LoginScreen$1.class
+com/mycompany/syslib/LoginScreen$2.class
+com/mycompany/syslib/LoginScreen$3.class

@@ -5,12 +5,24 @@
 package com.mycompany.syslib;
 
 import com.mycompany.syslib.*;
+import javax.swing.*;
 
 /**
  *
  * @author engenheiro
  */
 public class LoginScreen extends javax.swing.JPanel {
+    public JFrame frame;
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public void setFrame(JFrame frame) {
+        this.frame = frame;
+    }
+    
+
 
     /**
      * Creates new form Form1
@@ -160,6 +172,11 @@ public class LoginScreen extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        frame.removeAll();
+        frame.add(new CatalogoScreen());
+        
+        frame.repaint();
+        frame.revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed

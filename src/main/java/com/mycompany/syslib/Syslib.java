@@ -13,14 +13,15 @@ import java.awt.*;
  * @author engenheiro
  */
 public class Syslib {
+    public JFrame frame;
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
         
-        JFrame f = new JFrame();
-        f.setSize(1024, 600);
-        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        f.setVisible(true);
+        JFrame frame = new JFrame();
+        frame.setSize(1024, 600);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setVisible(true);
         
         
         JPanel panel = new JPanel(new GridLayout(1, 2));
@@ -30,12 +31,20 @@ public class Syslib {
         panel.add(b2);
         
         LoginScreen loginScreen = new LoginScreen();
-        f.add(loginScreen);
+        loginScreen.setFrame(frame);
         
-        f.repaint();
+        frame.add(loginScreen);
         
-        f.revalidate();
+        frame.repaint();
+        frame.revalidate();
         
-        
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public void setFrame(JFrame frame) {
+        this.frame = frame;
     }
 }

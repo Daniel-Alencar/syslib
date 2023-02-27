@@ -29,40 +29,36 @@ public class CatalogoScreen extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        name2 = new javax.swing.JLabel();
+        ScrollPane = new javax.swing.JScrollPane();
         contentArea = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        booksLabel = new javax.swing.JLabel();
         book1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        myBooksLabel = new javax.swing.JLabel();
         book2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        recentBooksLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(243, 243, 243));
 
-        jLabel1.setBackground(new java.awt.Color(62, 67, 159));
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Syslib");
-        jLabel1.setToolTipText("");
-        jLabel1.setOpaque(true);
+        name2.setBackground(new java.awt.Color(62, 67, 159));
+        name2.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        name2.setForeground(new java.awt.Color(255, 255, 255));
+        name2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name2.setText("Syslib");
+        name2.setToolTipText("");
+        name2.setOpaque(true);
 
         contentArea.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
 
-        jLabel5.setText("Livros");
-
-        Image img = new ImageIcon(this.getClass().getResource("/image1.png")).getImage();
-        jLabel6.setIcon(new ImageIcon(img));
+        booksLabel.setText("Livros");
 
         book1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/image1.png"))); // NOI18N
 
-        jLabel3.setText("Meus Livros");
+        myBooksLabel.setText("Meus Livros");
 
         book2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/image2.png"))); // NOI18N
 
-        jLabel4.setText("Livros recentes");
+        recentBooksLabel.setText("Livros recentes");
 
         javax.swing.GroupLayout contentAreaLayout = new javax.swing.GroupLayout(contentArea);
         contentArea.setLayout(contentAreaLayout);
@@ -71,67 +67,63 @@ public class CatalogoScreen extends javax.swing.JPanel {
             .addGroup(contentAreaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(contentAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(contentAreaLayout.createSequentialGroup()
                         .addComponent(book1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(book2))
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(myBooksLabel)
+                    .addComponent(recentBooksLabel)
+                    .addComponent(booksLabel))
+                .addContainerGap(696, Short.MAX_VALUE))
         );
         contentAreaLayout.setVerticalGroup(
             contentAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentAreaLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel3)
+                .addComponent(myBooksLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(contentAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(book1)
                     .addComponent(book2))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(recentBooksLabel)
                 .addGap(252, 252, 252)
-                .addComponent(jLabel5)
-                .addGap(372, 372, 372)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addComponent(booksLabel)
+                .addContainerGap(671, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(contentArea);
+        ScrollPane.setViewportView(contentArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(name2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
+                .addComponent(ScrollPane)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(112, 112, 112)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JLabel book1;
     private javax.swing.JLabel book2;
+    private javax.swing.JLabel booksLabel;
     private javax.swing.JPanel contentArea;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel myBooksLabel;
+    private javax.swing.JLabel name2;
+    private javax.swing.JLabel recentBooksLabel;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JScrollPane test = new JScrollPane(

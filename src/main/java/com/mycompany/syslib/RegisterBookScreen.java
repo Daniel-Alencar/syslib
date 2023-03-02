@@ -28,18 +28,18 @@ public class RegisterBookScreen extends javax.swing.JPanel {
 
         name1 = new javax.swing.JLabel();
         contentArea = new javax.swing.JPanel();
-        loginContent = new javax.swing.JPanel();
-        passwordTextField = new javax.swing.JTextField();
+        registerBookContent = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
-        emailTextField = new javax.swing.JTextField();
-        loginButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        nameTextField = new javax.swing.JTextField();
+        authorLabel = new javax.swing.JLabel();
+        authorTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         passwordTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        passwordTextField2 = new javax.swing.JTextField();
-        loginButton1 = new javax.swing.JButton();
+        publishingCompanyLabel = new javax.swing.JLabel();
+        publishingCompanyTextField = new javax.swing.JTextField();
+        addImageButton = new javax.swing.JButton();
+        registerButton = new javax.swing.JButton();
 
         name1.setBackground(new java.awt.Color(62, 67, 159));
         name1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
@@ -49,36 +49,30 @@ public class RegisterBookScreen extends javax.swing.JPanel {
         name1.setToolTipText("");
         name1.setOpaque(true);
 
-        loginContent.setBackground(new java.awt.Color(217, 217, 217));
-        loginContent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        passwordTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTextFieldActionPerformed(evt);
-            }
-        });
+        registerBookContent.setBackground(new java.awt.Color(217, 217, 217));
+        registerBookContent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         title.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Cadastro de livro");
         title.setToolTipText("");
 
-        emailTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        emailTextField.addActionListener(new java.awt.event.ActionListener() {
+        nameLabel.setText("Nome");
+
+        nameTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        nameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTextFieldActionPerformed(evt);
+                nameTextFieldActionPerformed(evt);
             }
         });
 
-        loginButton.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        loginButton.setText("Cadastrar");
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
+        authorLabel.setText("Autor");
+
+        authorTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
+                authorTextFieldActionPerformed(evt);
             }
         });
-
-        jLabel1.setText("Nome");
 
         jLabel2.setText("Data de publicação");
 
@@ -88,75 +82,81 @@ public class RegisterBookScreen extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setText("Autor");
+        publishingCompanyLabel.setText("Editora");
 
-        jLabel4.setText("Editora");
-
-        passwordTextField2.addActionListener(new java.awt.event.ActionListener() {
+        publishingCompanyTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTextField2ActionPerformed(evt);
+                publishingCompanyTextFieldActionPerformed(evt);
             }
         });
 
-        loginButton1.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
-        loginButton1.setText("Adicionar Imagem");
-        loginButton1.addActionListener(new java.awt.event.ActionListener() {
+        addImageButton.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        addImageButton.setText("Adicionar Imagem");
+        addImageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton1ActionPerformed(evt);
+                addImageButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout loginContentLayout = new javax.swing.GroupLayout(loginContent);
-        loginContent.setLayout(loginContentLayout);
-        loginContentLayout.setHorizontalGroup(
-            loginContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        registerButton.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        registerButton.setText("Cadastrar");
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout registerBookContentLayout = new javax.swing.GroupLayout(registerBookContent);
+        registerBookContent.setLayout(registerBookContentLayout);
+        registerBookContentLayout.setHorizontalGroup(
+            registerBookContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(loginContentLayout.createSequentialGroup()
-                .addGroup(loginContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(loginContentLayout.createSequentialGroup()
+            .addGroup(registerBookContentLayout.createSequentialGroup()
+                .addGroup(registerBookContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(registerBookContentLayout.createSequentialGroup()
                         .addGap(99, 99, 99)
-                        .addGroup(loginContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
+                        .addGroup(registerBookContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(publishingCompanyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(publishingCompanyLabel)
+                            .addComponent(authorLabel)
                             .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(loginContentLayout.createSequentialGroup()
+                            .addComponent(nameLabel)
+                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(authorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(registerBookContentLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
-                        .addComponent(loginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(loginContentLayout.createSequentialGroup()
+                        .addComponent(addImageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(registerBookContentLayout.createSequentialGroup()
                         .addGap(179, 179, 179)
-                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
-        loginContentLayout.setVerticalGroup(
-            loginContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginContentLayout.createSequentialGroup()
+        registerBookContentLayout.setVerticalGroup(
+            registerBookContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registerBookContentLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(title)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(nameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(authorLabel)
                 .addGap(5, 5, 5)
-                .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(authorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(5, 5, 5)
                 .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(publishingCompanyLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passwordTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(publishingCompanyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(loginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addImageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(registerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -166,14 +166,14 @@ public class RegisterBookScreen extends javax.swing.JPanel {
             contentAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentAreaLayout.createSequentialGroup()
                 .addGap(285, 285, 285)
-                .addComponent(loginContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(registerBookContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(286, Short.MAX_VALUE))
         );
         contentAreaLayout.setVerticalGroup(
             contentAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentAreaLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(loginContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(registerBookContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -194,45 +194,45 @@ public class RegisterBookScreen extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextFieldActionPerformed
+    private void authorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authorTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextFieldActionPerformed
+    }//GEN-LAST:event_authorTextFieldActionPerformed
 
-    private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
+    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailTextFieldActionPerformed
+    }//GEN-LAST:event_nameTextFieldActionPerformed
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     private void passwordTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordTextField1ActionPerformed
 
-    private void passwordTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextField2ActionPerformed
+    private void publishingCompanyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publishingCompanyTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextField2ActionPerformed
+    }//GEN-LAST:event_publishingCompanyTextFieldActionPerformed
 
-    private void loginButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton1ActionPerformed
+    private void addImageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addImageButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton1ActionPerformed
+    }//GEN-LAST:event_addImageButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addImageButton;
+    private javax.swing.JLabel authorLabel;
+    private javax.swing.JTextField authorTextField;
     private javax.swing.JPanel contentArea;
-    private javax.swing.JTextField emailTextField;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JButton loginButton;
-    private javax.swing.JButton loginButton1;
-    private javax.swing.JPanel loginContent;
     private javax.swing.JLabel name1;
-    private javax.swing.JTextField passwordTextField;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField passwordTextField1;
-    private javax.swing.JTextField passwordTextField2;
+    private javax.swing.JLabel publishingCompanyLabel;
+    private javax.swing.JTextField publishingCompanyTextField;
+    private javax.swing.JPanel registerBookContent;
+    private javax.swing.JButton registerButton;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

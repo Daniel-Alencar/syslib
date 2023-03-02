@@ -48,8 +48,8 @@ public class NewFrame extends javax.swing.JFrame {
         name2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnSearchBarLabel = new javax.swing.JLabel();
+        btnMenuLabel = new javax.swing.JLabel();
         ScrollPane = new javax.swing.JScrollPane();
         contentArea1 = new javax.swing.JPanel();
         booksLabel = new javax.swing.JLabel();
@@ -60,6 +60,25 @@ public class NewFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        MenuScreen = new javax.swing.JPanel();
+        name3 = new javax.swing.JLabel();
+        contentArea2 = new javax.swing.JPanel();
+        menuContent = new javax.swing.JPanel();
+        title1 = new javax.swing.JLabel();
+        settingsButton = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
+        BookScreen = new javax.swing.JPanel();
+        name = new javax.swing.JLabel();
+        contentArea3 = new javax.swing.JPanel();
+        bookImage = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        authorLabel = new javax.swing.JLabel();
+        buttonContainer = new javax.swing.JPanel();
+        deadLineLabel = new javax.swing.JLabel();
+        bookButton = new javax.swing.JButton();
+        messageContainer = new javax.swing.JPanel();
+        messageLabel = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -196,18 +215,25 @@ public class NewFrame extends javax.swing.JFrame {
         name2.setToolTipText("");
         name2.setOpaque(true);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("O que você quer ler hoje?");
-
-        jLabel6.setText("Menu");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnSearchBarLabel.setText("O que você quer ler hoje?");
+        btnSearchBarLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                btnSearchBarLabelMouseClicked(evt);
+            }
+        });
+
+        btnMenuLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/menu.png"))); // NOI18N
+        btnMenuLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuLabelMouseClicked(evt);
             }
         });
 
@@ -217,10 +243,10 @@ public class NewFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6)
+                .addComponent(btnMenuLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
+                    .addComponent(btnSearchBarLabel)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(212, 212, 212))
         );
@@ -228,13 +254,16 @@ public class NewFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnMenuLabel)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnSearchBarLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
+
+        ScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         contentArea1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
 
@@ -245,6 +274,11 @@ public class NewFrame extends javax.swing.JFrame {
         recentBooksLabel.setText("Livros recentes");
 
         bookImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/image1.png"))); // NOI18N
+        bookImage1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bookImage1MouseClicked(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/image1.png"))); // NOI18N
 
@@ -324,6 +358,224 @@ public class NewFrame extends javax.swing.JFrame {
 
         backgroundPanel.add(catalogoScreen, "card4");
 
+        name3.setBackground(new java.awt.Color(62, 67, 159));
+        name3.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        name3.setForeground(new java.awt.Color(255, 255, 255));
+        name3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name3.setText("Syslib");
+        name3.setToolTipText("");
+        name3.setOpaque(true);
+
+        menuContent.setBackground(new java.awt.Color(217, 217, 217));
+        menuContent.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        title1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title1.setText("Menu");
+        title1.setToolTipText("");
+
+        settingsButton.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        settingsButton.setText("Configurações");
+        settingsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                settingsButtonActionPerformed(evt);
+            }
+        });
+
+        logoutButton.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        logoutButton.setText("Sair");
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutButtonMouseClicked(evt);
+            }
+        });
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menuContentLayout = new javax.swing.GroupLayout(menuContent);
+        menuContent.setLayout(menuContentLayout);
+        menuContentLayout.setHorizontalGroup(
+            menuContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(title1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(menuContentLayout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addGroup(menuContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(logoutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(settingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
+        menuContentLayout.setVerticalGroup(
+            menuContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuContentLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(title1)
+                .addGap(34, 34, 34)
+                .addComponent(settingsButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(logoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                .addGap(85, 85, 85))
+        );
+
+        javax.swing.GroupLayout contentArea2Layout = new javax.swing.GroupLayout(contentArea2);
+        contentArea2.setLayout(contentArea2Layout);
+        contentArea2Layout.setHorizontalGroup(
+            contentArea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contentArea2Layout.createSequentialGroup()
+                .addGap(285, 285, 285)
+                .addComponent(menuContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(286, Short.MAX_VALUE))
+        );
+        contentArea2Layout.setVerticalGroup(
+            contentArea2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contentArea2Layout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(menuContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout MenuScreenLayout = new javax.swing.GroupLayout(MenuScreen);
+        MenuScreen.setLayout(MenuScreenLayout);
+        MenuScreenLayout.setHorizontalGroup(
+            MenuScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(name3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(contentArea2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        MenuScreenLayout.setVerticalGroup(
+            MenuScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MenuScreenLayout.createSequentialGroup()
+                .addComponent(name3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contentArea2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(91, Short.MAX_VALUE))
+        );
+
+        backgroundPanel.add(MenuScreen, "card4");
+
+        name.setBackground(new java.awt.Color(62, 67, 159));
+        name.setFont(new java.awt.Font("Liberation Sans", 1, 13)); // NOI18N
+        name.setForeground(new java.awt.Color(255, 255, 255));
+        name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name.setText("Syslib");
+        name.setToolTipText("");
+        name.setOpaque(true);
+
+        bookImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bookImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/baseBook.png"))); // NOI18N
+
+        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel.setText("Título do livro");
+
+        authorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        authorLabel.setText("Autor do livro");
+
+        deadLineLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        deadLineLabel.setText("Data de devolução: 22/10/2001");
+
+        bookButton.setText("Reservar");
+
+        javax.swing.GroupLayout buttonContainerLayout = new javax.swing.GroupLayout(buttonContainer);
+        buttonContainer.setLayout(buttonContainerLayout);
+        buttonContainerLayout.setHorizontalGroup(
+            buttonContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(deadLineLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonContainerLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(445, 445, 445))
+        );
+        buttonContainerLayout.setVerticalGroup(
+            buttonContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonContainerLayout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(deadLineLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(bookButton)
+                .addGap(9, 9, 9))
+        );
+
+        messageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        messageLabel.setText("Seu livro foi reservado! Compareça a biblioteca para retirar seu exemplar!");
+
+        javax.swing.GroupLayout messageContainerLayout = new javax.swing.GroupLayout(messageContainer);
+        messageContainer.setLayout(messageContainerLayout);
+        messageContainerLayout.setHorizontalGroup(
+            messageContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(messageContainerLayout.createSequentialGroup()
+                .addComponent(messageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        messageContainerLayout.setVerticalGroup(
+            messageContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(messageContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(messageLabel)
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout contentArea3Layout = new javax.swing.GroupLayout(contentArea3);
+        contentArea3.setLayout(contentArea3Layout);
+        contentArea3Layout.setHorizontalGroup(
+            contentArea3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(authorLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bookImage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1012, Short.MAX_VALUE)
+            .addComponent(buttonContainer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(messageContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        contentArea3Layout.setVerticalGroup(
+            contentArea3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentArea3Layout.createSequentialGroup()
+                .addContainerGap(156, Short.MAX_VALUE)
+                .addComponent(bookImage)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(titleLabel)
+                .addGap(18, 18, 18)
+                .addComponent(authorLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(messageContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        jLabel5.setText("Voltar");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BookScreenLayout = new javax.swing.GroupLayout(BookScreen);
+        BookScreen.setLayout(BookScreenLayout);
+        BookScreenLayout.setHorizontalGroup(
+            BookScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(name, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addGroup(BookScreenLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(BookScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(BookScreenLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(contentArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        BookScreenLayout.setVerticalGroup(
+            BookScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BookScreenLayout.createSequentialGroup()
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addContainerGap(533, Short.MAX_VALUE))
+            .addGroup(BookScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(contentArea3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        backgroundPanel.add(BookScreen, "card5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -356,43 +608,93 @@ public class NewFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void btnMenuLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuLabelMouseClicked
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jLabel6MouseClicked
+        catalogoScreen.setVisible(false);
+        MenuScreen.setVisible(true);
+    }//GEN-LAST:event_btnMenuLabelMouseClicked
+
+    private void settingsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingsButtonActionPerformed
+
+    private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logoutButtonActionPerformed
+
+    private void btnSearchBarLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSearchBarLabelMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchBarLabelMouseClicked
+
+    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
+        // TODO add your handling code here:
+        MenuScreen.setVisible(false);
+        loginScreen.setVisible(true);
+    }//GEN-LAST:event_logoutButtonMouseClicked
+
+    private void bookImage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookImage1MouseClicked
+        // TODO add your handling code here:
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(true);
+    }//GEN-LAST:event_bookImage1MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        BookScreen.setVisible(false);
+        catalogoScreen.setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BookScreen;
+    private javax.swing.JPanel MenuScreen;
     private javax.swing.JScrollPane ScrollPane;
+    private javax.swing.JLabel authorLabel;
     private javax.swing.JPanel backgroundPanel;
+    private javax.swing.JButton bookButton;
+    private javax.swing.JLabel bookImage;
     private javax.swing.JLabel bookImage1;
     private javax.swing.JLabel booksLabel;
+    private javax.swing.JLabel btnMenuLabel;
+    private javax.swing.JLabel btnSearchBarLabel;
+    private javax.swing.JPanel buttonContainer;
     private javax.swing.JLabel buttonEsqueciSenha;
     private javax.swing.JLabel buttonSouBibliotecario;
     private javax.swing.JPanel catalogoScreen;
     private javax.swing.JPanel contentArea;
     private javax.swing.JPanel contentArea1;
+    private javax.swing.JPanel contentArea2;
+    private javax.swing.JPanel contentArea3;
+    private javax.swing.JLabel deadLineLabel;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JButton loginButton;
     private javax.swing.JPanel loginContent;
     private javax.swing.JPanel loginScreen;
+    private javax.swing.JButton logoutButton;
+    private javax.swing.JPanel menuContent;
+    private javax.swing.JPanel messageContainer;
+    private javax.swing.JLabel messageLabel;
     private javax.swing.JLabel myBooksLabel;
+    private javax.swing.JLabel name;
     private javax.swing.JLabel name1;
     private javax.swing.JLabel name2;
+    private javax.swing.JLabel name3;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JLabel recentBooksLabel;
+    private javax.swing.JButton settingsButton;
     private javax.swing.JLabel title;
+    private javax.swing.JLabel title1;
+    private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
     
     public JScrollPane getScrollPane() {

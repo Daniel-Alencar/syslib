@@ -22,6 +22,11 @@ public class NewFrame extends javax.swing.JFrame {
      */
     public NewFrame() {
         initComponents();
+        
+        // Rolagem rapida
+        this.ScrollPane.getVerticalScrollBar().setUnitIncrement(30);
+        // Janela no meio da tela
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -129,11 +134,11 @@ public class NewFrame extends javax.swing.JFrame {
         nameLabel2 = new javax.swing.JLabel();
         numberOfBooksLabel = new javax.swing.JLabel();
         deleteImageLabel = new javax.swing.JLabel();
-        userContent2 = new javax.swing.JPanel();
-        userImageLabel1 = new javax.swing.JLabel();
-        nameLabel3 = new javax.swing.JLabel();
-        numberOfBooks1 = new javax.swing.JLabel();
-        deleteImageLabel1 = new javax.swing.JLabel();
+        userContent3 = new javax.swing.JPanel();
+        userImageLabel2 = new javax.swing.JLabel();
+        nameLabel4 = new javax.swing.JLabel();
+        numberOfBooksLabel1 = new javax.swing.JLabel();
+        deleteImageLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -331,7 +336,7 @@ public class NewFrame extends javax.swing.JFrame {
 
         ScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        contentArea1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        contentArea1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
 
         booksLabel.setText("Livros");
 
@@ -417,8 +422,8 @@ public class NewFrame extends javax.swing.JFrame {
                 .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1060,24 +1065,24 @@ public class NewFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchBarContentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(backButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 189, Short.MAX_VALUE)
                 .addGroup(searchBarContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(searchBarLabel)
                     .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 565, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(168, 168, 168)
                 .addComponent(jLabel5)
                 .addGap(15, 15, 15))
         );
         searchBarContentLayout.setVerticalGroup(
             searchBarContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchBarContentLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
+                .addGap(7, 7, 7)
                 .addComponent(searchBarLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(searchBarContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backButton2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(backButton2)
+                    .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchBarContentLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
@@ -1100,7 +1105,7 @@ public class NewFrame extends javax.swing.JFrame {
             .addGroup(userContent1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(userImageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(nameLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
                 .addComponent(numberOfBooksLabel)
@@ -1125,44 +1130,45 @@ public class NewFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18))))
         );
 
-        userImageLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        userImageLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
 
-        nameLabel3.setText("Maic de Oliveira Santos");
+        nameLabel4.setText("Daniel Alencar Penha Carvalho");
 
-        numberOfBooks1.setFont(new java.awt.Font("Liberation Sans", 0, 15)); // NOI18N
-        numberOfBooks1.setText("18");
+        numberOfBooksLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 15)); // NOI18N
+        numberOfBooksLabel1.setText("18");
 
-        deleteImageLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
+        deleteImageLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
 
-        javax.swing.GroupLayout userContent2Layout = new javax.swing.GroupLayout(userContent2);
-        userContent2.setLayout(userContent2Layout);
-        userContent2Layout.setHorizontalGroup(
-            userContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userContent2Layout.createSequentialGroup()
+        javax.swing.GroupLayout userContent3Layout = new javax.swing.GroupLayout(userContent3);
+        userContent3.setLayout(userContent3Layout);
+        userContent3Layout.setHorizontalGroup(
+            userContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userContent3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(userImageLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nameLabel3)
+                .addComponent(userImageLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(nameLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(numberOfBooks1)
+                .addComponent(numberOfBooksLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(deleteImageLabel1)
+                .addComponent(deleteImageLabel2)
                 .addGap(12, 12, 12))
         );
-        userContent2Layout.setVerticalGroup(
-            userContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userContent2Layout.createSequentialGroup()
+        userContent3Layout.setVerticalGroup(
+            userContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userContent3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(userImageLabel1)
-                .addContainerGap())
-            .addGroup(userContent2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(userContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(deleteImageLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(userContent2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nameLabel3)
-                        .addComponent(numberOfBooks1)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(userContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userContent3Layout.createSequentialGroup()
+                        .addComponent(userImageLabel2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userContent3Layout.createSequentialGroup()
+                        .addGroup(userContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(deleteImageLabel2)
+                            .addGroup(userContent3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(nameLabel4)
+                                .addComponent(numberOfBooksLabel1)))
+                        .addGap(18, 18, 18))))
         );
 
         javax.swing.GroupLayout usersContentLayout = new javax.swing.GroupLayout(usersContent);
@@ -1170,20 +1176,22 @@ public class NewFrame extends javax.swing.JFrame {
         usersContentLayout.setHorizontalGroup(
             usersContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, usersContentLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(usersContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(userContent1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(userContent2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(usersContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(userContent3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(usersContentLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(userContent1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(14, 14, 14))
         );
         usersContentLayout.setVerticalGroup(
             usersContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(usersContentLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(41, 41, 41)
                 .addComponent(userContent1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(userContent2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(361, Short.MAX_VALUE))
+                .addComponent(userContent3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(349, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout UsersScreenLayout = new javax.swing.GroupLayout(UsersScreen);
@@ -1352,7 +1360,7 @@ public class NewFrame extends javax.swing.JFrame {
     private void backButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButton2MouseClicked
         // TODO add your handling code here:
         UsersScreen.setVisible(false);
-        catalogoScreen.setVisible(true);
+        MenuScreen.setVisible(true);
     }//GEN-LAST:event_backButton2MouseClicked
 
     private void searchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBarActionPerformed
@@ -1428,7 +1436,7 @@ public class NewFrame extends javax.swing.JFrame {
     private javax.swing.JTextField cpfTextField1;
     private javax.swing.JLabel deadLineLabel;
     private javax.swing.JLabel deleteImageLabel;
-    private javax.swing.JLabel deleteImageLabel1;
+    private javax.swing.JLabel deleteImageLabel2;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JTextField emailTextField1;
@@ -1464,11 +1472,11 @@ public class NewFrame extends javax.swing.JFrame {
     private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel nameLabel1;
     private javax.swing.JLabel nameLabel2;
-    private javax.swing.JLabel nameLabel3;
+    private javax.swing.JLabel nameLabel4;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField nameTextField1;
-    private javax.swing.JLabel numberOfBooks1;
     private javax.swing.JLabel numberOfBooksLabel;
+    private javax.swing.JLabel numberOfBooksLabel1;
     private javax.swing.JTextField passwordTextField;
     private javax.swing.JLabel publicationDateLabel;
     private javax.swing.JTextField publicationDateTextField;
@@ -1491,9 +1499,9 @@ public class NewFrame extends javax.swing.JFrame {
     private javax.swing.JLabel title3;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JPanel userContent1;
-    private javax.swing.JPanel userContent2;
+    private javax.swing.JPanel userContent3;
     private javax.swing.JLabel userImageLabel;
-    private javax.swing.JLabel userImageLabel1;
+    private javax.swing.JLabel userImageLabel2;
     private javax.swing.JPanel usersContent;
     // End of variables declaration//GEN-END:variables
     

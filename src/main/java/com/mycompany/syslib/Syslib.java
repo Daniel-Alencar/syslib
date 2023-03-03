@@ -4,7 +4,6 @@
 
 package com.mycompany.syslib;
 
-import com.mycompany.syslib.*;
 
 import javax.swing.*;
 import java.awt.*;

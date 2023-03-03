@@ -1245,7 +1245,14 @@ public class NewFrame extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+        
         loginScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        MenuScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        
         catalogoScreen.setVisible(true);
     }//GEN-LAST:event_loginButtonActionPerformed
 
@@ -1256,6 +1263,12 @@ public class NewFrame extends javax.swing.JFrame {
     private void btnMenuLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuLabelMouseClicked
         // TODO add your handling code here:
         catalogoScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        
         MenuScreen.setVisible(true);
     }//GEN-LAST:event_btnMenuLabelMouseClicked
 
@@ -1274,18 +1287,36 @@ public class NewFrame extends javax.swing.JFrame {
     private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
         // TODO add your handling code here:
         MenuScreen.setVisible(false);
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        
         loginScreen.setVisible(true);
     }//GEN-LAST:event_logoutButtonMouseClicked
 
     private void bookImage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookImage1MouseClicked
         // TODO add your handling code here:
         catalogoScreen.setVisible(false);
+        MenuScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        
         BookScreen.setVisible(true);
     }//GEN-LAST:event_bookImage1MouseClicked
 
     private void backButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButtonMouseClicked
         // TODO add your handling code here:
         BookScreen.setVisible(false);
+        MenuScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        
         catalogoScreen.setVisible(true);
     }//GEN-LAST:event_backButtonMouseClicked
 
@@ -1300,6 +1331,12 @@ public class NewFrame extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
         catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        MenuScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        
         RegisterBookScreen.setVisible(true);
     }//GEN-LAST:event_jLabel6MouseClicked
 
@@ -1329,7 +1366,13 @@ public class NewFrame extends javax.swing.JFrame {
 
     private void backButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButton1MouseClicked
         // TODO add your handling code here:
+        BookScreen.setVisible(false);
+        MenuScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
         RegisterBookScreen.setVisible(false);
+        
         catalogoScreen.setVisible(true);
     }//GEN-LAST:event_backButton1MouseClicked
 
@@ -1359,7 +1402,13 @@ public class NewFrame extends javax.swing.JFrame {
 
     private void backButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backButton2MouseClicked
         // TODO add your handling code here:
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
         UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         MenuScreen.setVisible(true);
     }//GEN-LAST:event_backButton2MouseClicked
 
@@ -1369,31 +1418,61 @@ public class NewFrame extends javax.swing.JFrame {
 
     private void settingsButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButton2MouseClicked
         // TODO add your handling code here:
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
         MenuScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         UsersScreen.setVisible(true);
     }//GEN-LAST:event_settingsButton2MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        MenuScreen.setVisible(false);
         UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         RegisterUserScreen.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
         RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         MenuScreen.setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        MenuScreen.setVisible(false);
+        catalogoScreen.setVisible(false);
+        BookScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         catalogoScreen.setVisible(true);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void settingsButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMouseClicked
         // TODO add your handling code here:
+        BookScreen.setVisible(false);
         MenuScreen.setVisible(false);
+        RegisterUserScreen.setVisible(false);
+        UsersScreen.setVisible(false);
+        loginScreen.setVisible(false);
+        RegisterBookScreen.setVisible(false);
+        
         catalogoScreen.setVisible(true);
     }//GEN-LAST:event_settingsButtonMouseClicked
 
